@@ -12,6 +12,12 @@ class HomeService {
         'name': 'Jane Doe',
         'email': 'jane.doe@tcg.com',
         'age': 33
+    }, 
+    {
+        id: 2,
+        'name': 'Jane Johnson',
+        'email': 'jane.johnson@tcg.com',
+        'age': 23
     }];
     
     var uid = contacts.length;
