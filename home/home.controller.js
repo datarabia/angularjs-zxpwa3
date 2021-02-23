@@ -3,7 +3,12 @@ class HomeCtrl {
     "ngInject";
     var $ctrl=this;
     $ctrl.name='Contacts';
-    $ctrl.contacts = HomeService.list();
+
+    var paging = {};
+    paging.currentPage = 1;
+    paging.hasPrevious = false;
+    paging.hasNext = false;
+    $ctrl.results = HomeService.list(paging);
     $ctrl.showModal = false;
     $ctrl.contact = {};
 

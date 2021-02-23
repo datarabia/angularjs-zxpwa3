@@ -22,6 +22,7 @@ class HomeService {
     
     var uid = contacts.length;
     var alertTxt = "";
+    
 
     this.save = function (contact) {
         if (contact.name != null && !angular.isUndefined(contact.name)) {
@@ -59,8 +60,11 @@ class HomeService {
         this.alertTxt = "Deleted Successfully!";
     }
 
-    this.list = function () {
-        return contacts;
+    this.list = function (paging) {
+        var results = {};
+        results.paging = paging;
+        results.contacts = contacts;
+        return results;
     }
     }
 }
